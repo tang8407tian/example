@@ -8,9 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * introduce：
  *
@@ -32,30 +29,7 @@ public class Demo {
         log.info("生成id:{}", nextId);
     }
 
-    @Test
-    public void demo2() {
-        int[] nums = new int[]{2, 7, 11, 15};
-        int[] ints = twoSum(nums, 9);
-        log.info("ints{}", ints);
-    }
 
 
-    public int[] twoSum(int[] nums, int target) {
-        Map<Integer, int[]> map = new HashMap<>(nums.length * nums.length - nums.length);
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i+1; j < nums.length; j++) {
-                if (i != j) {
-                    int[] links = new int[2];
-                    links[0] = i;
-                    links[1] = j;
-                    int targets = nums[i] + nums[j];
-                    if (map.get(targets) == null) {
-                        map.put(targets, links);
-                    }
-                }
-            }
-        }
 
-        return map.get(target);
-    }
 }
