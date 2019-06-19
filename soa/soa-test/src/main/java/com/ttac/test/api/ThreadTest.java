@@ -20,19 +20,18 @@ import java.util.TreeSet;
 public class ThreadTest {
 
 
-
-    public void threadDemo(){
+    public void threadDemo() {
         Thread thread = new Thread();
 
     }
 
 
-    public void Thread(){
+    public void Thread() {
 
     }
 
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 //        String number = "9988779.00000";
 //        Long valueOf = Long.valueOf(number);
 //        long parseLong = Long.parseLong(number);
@@ -44,7 +43,7 @@ public class ThreadTest {
     }
 
 
-    public static void dateLocal(Long startDate, Long endDate){
+    public static void dateLocal(Long startDate, Long endDate) {
         Instant instants = Instant.ofEpochMilli(startDate);
         log.info("instant:{}", instants);
         ZoneId zoneId = ZoneId.systemDefault();
@@ -65,9 +64,6 @@ public class ThreadTest {
         log.info("localDate:{}", localDate);
         log.info("localDateTime:{}", localDateTime);
     }
-
-
-
 
 
 }

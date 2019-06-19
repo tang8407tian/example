@@ -6,19 +6,15 @@ import com.ttac.entity.admin.vo.SendDataVo;
 import com.ttac.entity.admin.vo.UpdateStatusVo;
 import com.ttac.entity.admin.vo.demo.Demo1;
 import com.ttac.entity.base.vo.date.DateRangeVo;
-import com.ttac.service.base.service.IdService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
+import org.assertj.core.util.Lists;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * introduce：
@@ -32,15 +28,6 @@ import java.util.Map;
 @Slf4j
 public class Demo {
 
-    @Autowired
-    private IdService idService;
-
-    @Test
-    public void demo1() {
-        long nextId = idService.getNextId();
-        log.info("生成id:{}", nextId);
-    }
-
     @Test
     public void demo2() {
         int[] nums = new int[]{2, 7, 11, 15};
@@ -49,12 +36,10 @@ public class Demo {
     }
 
 
-
-
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, int[]> map = new HashMap<>(nums.length * nums.length - nums.length);
         for (int i = 0; i < nums.length; i++) {
-            for (int j = i+1; j < nums.length; j++) {
+            for (int j = i + 1; j < nums.length; j++) {
                 if (i != j) {
                     int[] links = new int[2];
                     links[0] = i;
@@ -71,7 +56,17 @@ public class Demo {
     }
 
     @Test
-    public void intTest(){
+    public void numberTest(){
+        log.info("20/2:{}", 20/2);
+        log.info("20%2:{}", 20%2);
+        log.info("20/20:{}", 20/20);
+        log.info("20%20:{}", 20%20);
+        log.info("20/200:{}", 20/200);
+        log.info("20%200:{}", 20%200);
+    }
+
+    @Test
+    public void intTest() {
         Demo1 demo1 = new Demo1();
         demo1.setAge(1999666);
         demo1.setBigAge(20000L);
@@ -88,28 +83,28 @@ public class Demo {
      * 自定义时间工具类测试
      */
     @Test
-    public void dateTest(){
+    public void dateTest() {
         DateRangeVo dateByDateRange = CustomDateUtils.getDateByDateRange(1480176000000L, 1541347200000L);
         LinkedHashMap<String, Object> map = dateByDateRange.getMap();
-        if (null != map){
+        if (null != map) {
             log.info("时间集合values：{}", map.values());
             log.info("时间集合key：{}", map.keySet());
         }
-        log.info("size：{}",dateByDateRange.getDateList().size());
+        log.info("size：{}", dateByDateRange.getDateList().size());
         log.info("自定义时间工具类测试---dateByDateRange:{}", dateByDateRange.toString());
     }
 
     @Test
-    public void setTest(){
+    public void setTest() {
         HashSet<Long> longs = new HashSet<>(0);
         log.info("set集合是否为空:{}", CollectionUtils.isNotEmpty(longs));
         longs.add(1L);
         log.info("set集合是否为空:{}", CollectionUtils.isNotEmpty(longs));
-        log.info("set:{}",longs);
+        log.info("set:{}", longs);
     }
 
     @Test
-    public void enumTest(){
+    public void enumTest() {
         UpdateStatusVo<CommonEnum> updateStatusVo = new UpdateStatusVo<>();
         updateStatusVo.setStatus(CommonEnum.ENABLE);
         log.info("UpdateStatusVo<CommonEnum>:{}", updateStatusVo.toString());
@@ -119,6 +114,64 @@ public class Demo {
         UpdateStatusVo<CommonEnum> data = sendDataVo.getData();
         log.info("UpdateStatusVo<CommonEnum> data = sendDataVo.getData() :{}", data.toString());
         CommonEnum status = data.getStatus();
-        log.info("status:{}、{}、{}",status, status.getCode(), status.getDescription());
+        log.info("status:{}、{}、{}", status, status.getCode(), status.getDescription());
+    }
+
+
+    /**
+     * 集合排序测试
+     */
+    @Test
+    public void sortListTest() {
+        List<Demo1> list = Lists.newArrayList();
+//        list.add(new Demo1(70,"张三"));
+//        list.add(new Demo1(10,"李四"));
+//        list.add(new Demo1(50,"王五"));
+//        list.add(new Demo1(130,"赵立"));
+//        list.add(new Demo1(44,"阿奇"));
+
+        log.info("排序前集合顺序:{}", list);
+        Collections.reverse(list);
+        log.info("排序 reverse 集合顺序:{}", list);
+        Collections.sort(list, new Comparator<Demo1>() {
+            @Override
+            public int compare(Demo1 o1, Demo1 o2) {
+                if (o1.getAge() > o2.getAge()) {
+                    return 1;
+                }
+                if (Objects.equals(o1.getAge(), o2.getAge())) {
+                    return 0;
+                }
+                return -1;
+            }
+        });
+        log.info("排序  后1  集合顺序:{}", list);
+        Collections.sort(list, new Comparator<Demo1>() {
+            @Override
+            public int compare(Demo1 o1, Demo1 o2) {
+                if (o1.getAge() > o2.getAge()) {
+                    return -1;
+                }
+                if (Objects.equals(o1.getAge(), o2.getAge())) {
+                    return 0;
+                }
+                return 1;
+            }
+        });
+        log.info("排序  后2  集合顺序:{}", list);
+    }
+
+    @Test
+    public void demo4Test(){
+        String str = "helloo word oo";
+        int i = str.codePointAt(1);
+        log.info("codePointAt:{}", i);
+        log.info("\"ab\".equals(new StringBuilder(\"ab\")):{}","ab".equals(new StringBuilder("ab")));
+        log.info("\"ab\".contentEquals(new StringBuilder(\"ab\")):{}","ab".contentEquals(new StringBuilder("ab")));
+
+        String replace = str.replace("o", "T");
+        log.info("replace(char oldChar, char newChar)--》old：{}、new:{}", str, replace);
+        String replaceFirst = str.replaceFirst("o", "R");
+        log.info("replaceFirst:{}", replaceFirst);
     }
 }

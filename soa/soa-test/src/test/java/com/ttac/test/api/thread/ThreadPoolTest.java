@@ -26,13 +26,13 @@ public class ThreadPoolTest {
     private ThreadPoolTestController threadPoolTestController;
 
     @Test
-    public void threadPoolTest(){
+    public void threadPoolTest() {
         threadPoolTestController.createThreadPool();
     }
 
 
     @Test
-    public void dates(){
+    public void dates() {
         Date date = new Date(System.currentTimeMillis());
         java.sql.Date date1 = new java.sql.Date(System.currentTimeMillis());
         LocalDate now = LocalDate.now();

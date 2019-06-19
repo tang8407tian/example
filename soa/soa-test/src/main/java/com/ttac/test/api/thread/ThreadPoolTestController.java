@@ -15,7 +15,7 @@ import java.util.concurrent.Executors;
 @RestController
 public class ThreadPoolTestController {
 
-    public void createThreadPool(){
+    public void createThreadPool() {
         ExecutorService pool = Executors.newFixedThreadPool(2);
         MyThread myThread = new MyThread();
         MyThread myThread1 = new MyThread();

@@ -8,7 +8,13 @@ primus:
     url: 127.0.0.1:2181
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url:  jdbc:mysql://localhost:3306/monitor?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    url:  jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
     username: root
     password: root
+  jpa:
+    database: mysql
+    generate-ddl: true
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true

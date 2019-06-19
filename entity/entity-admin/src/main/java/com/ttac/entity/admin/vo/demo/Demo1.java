@@ -17,4 +17,19 @@ public class Demo1 {
     private Long bigAge;
 
     private String name;
+
+
+    public Demo1() {
+    }
+
+    public Demo1(Integer age, String name) {
+        this.age = age;
+        this.name = name;
+    }
+
+    public Demo1(Integer age, Long bigAge, String name) {
+        this.age = age;
+        this.bigAge = bigAge;
+        this.name = name;
+    }
 }
