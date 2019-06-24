@@ -14,6 +14,7 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.sql.Timestamp;
 import java.util.*;
 
 /**
@@ -173,5 +174,34 @@ public class Demo {
         log.info("replace(char oldChar, char newChar)--》old：{}、new:{}", str, replace);
         String replaceFirst = str.replaceFirst("o", "R");
         log.info("replaceFirst:{}", replaceFirst);
+    }
+
+    @Test
+    public void stringTimeTest(){
+        int number = 100000;
+        Timestamp strStart = new Timestamp(System.currentTimeMillis());
+        String str = "a";
+        for (int i = 0;i<= number; i++){
+            str += i+"-";
+        }
+        Timestamp strEnd = new Timestamp(System.currentTimeMillis());
+        log.info("str执行时间:{}",strEnd.getTime() - strStart.getTime());
+
+        Timestamp bufferStart = new Timestamp(System.currentTimeMillis());
+        StringBuffer stringBuffer = new StringBuffer();
+        for (int i =0;i <= number;i++){
+            stringBuffer.append(i).append("-");
+        }
+        Timestamp bufferEnd = new Timestamp(System.currentTimeMillis());
+        log.info("buffer执行时间:{}",bufferEnd.getTime() - bufferStart.getTime());
+
+
+        Timestamp builderStart = new Timestamp(System.currentTimeMillis());
+        StringBuilder builder = new StringBuilder();
+        for (int i =0;i <= number;i++){
+            builder.append(i).append("-");
+        }
+        Timestamp builderEnd = new Timestamp(System.currentTimeMillis());
+        log.info("builder执行时间:{}",builderEnd.getTime() - builderStart.getTime());
     }
 }
