@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author fish
  */
 @SpringBootApplication
-
 public class ServiceApplication {
 
 	public static void main(String[] args) {

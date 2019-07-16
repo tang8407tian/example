@@ -13,7 +13,7 @@ public interface BaseEnum {
      * 获取枚举数值
      * @return
      */
-    int getCode();
+    Integer getCode();
 
     /**
      * 获取枚举描述

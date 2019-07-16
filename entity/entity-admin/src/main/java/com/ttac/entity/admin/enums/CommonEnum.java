@@ -37,7 +37,7 @@ public enum CommonEnum implements BaseEnum{
     private String description;
 
     @Override
-    public int getCode() {
+    public Integer getCode() {
         return code;
     }
 

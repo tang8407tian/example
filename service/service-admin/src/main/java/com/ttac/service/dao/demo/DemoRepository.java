@@ -1,6 +1,6 @@
 package com.ttac.service.dao.demo;
 
-import com.ttac.service.po.example.Demo1;
+import com.ttac.service.dao.po.example.Demo1;
 import org.springframework.data.repository.CrudRepository;
 
 /**

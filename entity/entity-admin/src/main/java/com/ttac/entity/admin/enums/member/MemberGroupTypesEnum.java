@@ -48,7 +48,7 @@ public enum MemberGroupTypesEnum implements BaseEnum {
     public static class Converter extends BaseConvertEnum<MemberGroupTypesEnum> {
     }
 
-    private int code;
+    private Integer code;
     private String description;
     private String rule;
     private boolean frm;
