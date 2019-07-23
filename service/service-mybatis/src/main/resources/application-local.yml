@@ -1,0 +1,81 @@
+server:
+  port: 9099
+  servlet:
+    context-path: /service-activity
+# 注册到注册中心
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:7777/eureka/
+spring:
+#  cloud:
+#    bus:
+#      enabled: false
+#    consul:
+#      host: localhost
+#      port: 8500
+#      discovery:
+#        register: false
+  http:
+    encoding:
+      charset: utf-8
+  jackson:
+    default-property-inclusion: non_null
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: ${JDBC_URL:jdbc:mysql://127.0.0.1:3306/demo?useUnicode=true&allowMultiQueries=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=Asia/Shanghai}
+    username: ${DATABASE_USERNAME:root}
+    password: ${DATABASE_PASSWORD:root}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-timeout: 30000
+      max-lifetime: 28500
+      maximum-pool-size: 20
+      idle-timeout: 6000000
+      connection-test-query: "SELECT 1"
+  output:
+    ansi:
+      enabled: always
+  main:
+    allow-bean-definition-overriding: true
+logging:
+  path: ${LOG_PATH:./log/}
+  level:
+    root: ${LOG_LEVEL:info}
+mybatis-plus:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.biz.primus.ms.activity.dao.mapper
+  configuration:
+    map-underscore-to-camel-case: true
+
+    # 控制台打印sql语句,调试用
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+security:
+  oauth2:
+    accessTokenUri: "http://localhost:8081/admin-api/oauth/token"
+    client:
+      client-id: test
+      client-secret: "{noop}test"
+# 文件上传路径
+file_path: D://image/
+#file_path: /opt/image/
+
+primus:
+  short:
+    message:
+      config:
+        enabled: true
+        accessKeyId: LTAIujgfrvwRjhbX
+        accessKeySecret: ldSZZyuvDEX4CW47bWqQBMEen582Ph
+  redis:
+    maxTotal: 120
+    maxIdle: 10
+    timeBetweenEvictionRunsMillis: 30000
+    minEvictableIdleTimeMillis: 30000
+    testOnBorrow: true
+    host: 127.0.0.1
+    port: 6379
+    name:
+    password: root
