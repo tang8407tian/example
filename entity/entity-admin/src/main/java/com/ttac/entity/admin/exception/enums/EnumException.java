@@ -17,7 +17,7 @@ public enum EnumException implements BaseExceptionType {
 
     GET_CODE_ERROR(1001, "枚举获取状态码失败!");
 
-    int code;
+    Integer code;
 
     String description;
 

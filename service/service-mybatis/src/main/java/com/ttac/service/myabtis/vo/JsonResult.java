@@ -18,12 +18,10 @@ public class JsonResult<T> implements Serializable {
     /**
      * 200 代表成功
      */
-    private final Integer DEFAULT_SUCCESS_CODE = 200;
-    private final String DEFAULT_SUCCESS_MSG = "success";
     @ApiModelProperty("状态码")
-    private Integer code;
+    private Integer code = 200;
     @ApiModelProperty("信息")
-    private String msg;
+    private String msg = "success";
     @ApiModelProperty("时间戳")
     private long ts;
     @ApiModelProperty("返回内容")
@@ -36,14 +34,10 @@ public class JsonResult<T> implements Serializable {
     private String access_token;
 
     public JsonResult() {
-        this.code = DEFAULT_SUCCESS_CODE;
-        this.msg = DEFAULT_SUCCESS_MSG;
         this.ts = System.currentTimeMillis();
     }
 
     public JsonResult(T data) {
-        this.code = DEFAULT_SUCCESS_CODE;
-        this.msg = DEFAULT_SUCCESS_MSG;
         this.ts = System.currentTimeMillis();
         this.data = data;
     }

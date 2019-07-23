@@ -2,8 +2,6 @@ package com.ttac.service.myabtis.config.swagger;/**
 // * Created by tkmttt on 2019/5/13 17:14.
 // */
 
-import io.swagger.annotations.Api;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -24,32 +22,23 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class Swagger2Configuration {
 
-    @Value("${security.oauth2.accessTokenUri}")
-    private String accessTokenUri;
+
 
     @Bean
     public Docket userApi() {
-        return new Docket(DocumentationType.SWAGGER_2).groupName("user").apiInfo(userApiInfo()).select()
-                .apis(RequestHandlerSelectors.basePackage("com.ttac.servicemybatis.myabtis.controller.user"))
-                .apis(RequestHandlerSelectors.withClassAnnotation(Api.class))
+        return new Docket(DocumentationType.SWAGGER_2)
+                .groupName("user")
+                .apiInfo(userApiInfo())
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.ttac.service.myabtis.controller.user"))
                 .build();
 
     }
     private ApiInfo userApiInfo() {
-        return new ApiInfoBuilder().title("ttac Api Docs : user").version("1.0.0").build();
+        return new ApiInfoBuilder().title("TTAC Api Docs : user").version("1.0.0").build();
     }
 
-   /* @Bean
-    public Docket exchangeApi() {
-        return new Docket(DocumentationType.SWAGGER_2).groupName("exchange").apiInfo(exchangeApiInfo()).select()
-                .apis(RequestHandlerSelectors.basePackage("com.biz.primus.ms.activity.api.controller.promotion.exchange"));
-                // .apis(RequestHandlerSelectors.withClassAnnotation(Api.class))
-                //.paths(PathSelectors.any()).build().securityContexts(Collections.singletonList(securityContext()));
-               *//* .securitySchemes(Arrays.asList(securitySchema()))*//*;
-    }*/
-    private ApiInfo exchangeApiInfo() {
-        return new ApiInfoBuilder().title("NCE Api Docs : common").version("1.0.0").build();
-    }
+
 
 
    /* private OAuth securitySchema() {

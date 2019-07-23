@@ -1,7 +1,7 @@
 server:
-  port: 9099
+  port: 9001
   servlet:
-    context-path: /service-activity
+    context-path: /service-mybatis
 # 注册到注册中心
 eureka:
   instance:

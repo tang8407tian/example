@@ -21,8 +21,12 @@ public class SwaggerConfig {
 
     @Bean
     public Docket userApi() {
-        return new Docket(DocumentationType.SWAGGER_2).groupName("login").apiInfo(userApiInfo()).select()
-                .apis(RequestHandlerSelectors.basePackage("com.ttac.service.api.login")).build();
+        return new Docket(DocumentationType.SWAGGER_2)
+                .groupName("login")
+                .apiInfo(userApiInfo())
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.ttac.service.api.login"))
+                .build();
     }
 
     private ApiInfo userApiInfo() {
