@@ -1,8 +1,8 @@
-package com.ttac.servicemybatis.dao.mapper;
+package com.ttac.service.myabtis.dao.mapper;
 
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.ttac.servicemybatis.dao.entity.Demo;
+import com.ttac.service.myabtis.dao.entity.Demo;
 
 /**
  * @author init

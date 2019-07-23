@@ -1,10 +1,10 @@
-package com.ttac.servicemybatis.service.impl;
+package com.ttac.service.myabtis.service.impl;
 
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.ttac.servicemybatis.dao.entity.Demo;
-import com.ttac.servicemybatis.dao.mapper.DemoMapper;
-import com.ttac.servicemybatis.service.DemoService;
+import com.ttac.service.myabtis.dao.entity.Demo;
+import com.ttac.service.myabtis.dao.mapper.DemoMapper;
+import com.ttac.service.myabtis.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

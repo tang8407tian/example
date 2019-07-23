@@ -1,4 +1,4 @@
-package com.ttac.servicemybatis.dao.entity;
+package com.ttac.service.myabtis.dao.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

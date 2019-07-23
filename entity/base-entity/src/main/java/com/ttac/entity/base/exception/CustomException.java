@@ -20,7 +20,7 @@ public class CustomException extends RuntimeException implements BaseExceptionTy
     private String description;
 
     @Override
-    public int getCode() {
+    public Integer getCode() {
         return code;
     }
 

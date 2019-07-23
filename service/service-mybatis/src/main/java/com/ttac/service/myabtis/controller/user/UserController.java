@@ -1,7 +1,7 @@
-package com.ttac.servicemybatis.controller;
+package com.ttac.service.myabtis.controller.user;
 
 
-import com.ttac.servicemybatis.service.UserService;
+import com.ttac.service.myabtis.service.UserService;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

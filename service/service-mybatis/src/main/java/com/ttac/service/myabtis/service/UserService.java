@@ -1,8 +1,8 @@
-package com.ttac.servicemybatis.service;
+package com.ttac.service.myabtis.service;
 
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.ttac.servicemybatis.dao.entity.User;
+import com.ttac.service.myabtis.dao.entity.User;
 
 /**
  * @author init
