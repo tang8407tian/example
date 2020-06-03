@@ -3,10 +3,7 @@ package com.ttac.service.api;
 import com.ttac.entity.admin.vo.demo.DemoSearchVO;
 import com.ttac.service.service.test.TestService;
 import com.ttac.service.util.JsonResult;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -40,6 +37,15 @@ public class SwaggerDemoApiController {
             @ApiImplicitParam(name = "createTime", value = "创建时间", required = true, paramType = "query", dataType = "Long")
     })
     public JsonResult getDemo(@RequestParam String id, @RequestParam String name,@RequestParam Long createTime ){
+        String s = new StringBuilder().append(id).append(",").append(name).append(",").append(createTime).toString();
+        return JsonResult.success(s);
+    }
+
+    @GetMapping("/getDemo1")
+    @ApiOperation(value = "get请求方式Demo",notes = "get测试")
+    public JsonResult getDemo1(@ApiParam("id") @RequestParam String id
+            ,@ApiParam("姓名") @RequestParam String name
+            ,@ApiParam("创建时间") @RequestParam Long createTime ){
         String s = new StringBuilder().append(id).append(",").append(name).append(",").append(createTime).toString();
         return JsonResult.success(s);
     }

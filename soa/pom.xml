@@ -29,16 +29,16 @@
                 <artifactId>mybatisplus-maven-plugin</artifactId>
                 <version>5.0</version>
                 <configuration>
-                    <outputDir>D:\code\mybatis\demo</outputDir>
+                    <outputDir>D:\code\mybatis\xian</outputDir>
                     <fileOverride>true</fileOverride>
                     <enableCache>false</enableCache>
                     <author>init</author>
                     <activeRecord>false</activeRecord>
                     <dataSource>
                         <driverName>com.mysql.jdbc.Driver</driverName>
-                        <!--<url>jdbc:mysql://125.64.5.84:23306/marketing?useUnicode=true&amp;useSSL=false</url>-->
-                        <!--<username>root</username>-->
-                        <!--<password>6gRHaF49$fp0D5DH</password>-->
+<!--                        <url>jdbc:mysql://125.64.5.84:23306/metro?useUnicode=true&amp;useSSL=false</url>-->
+<!--                        <username>root</username>-->
+<!--                        <password>6gRHaF49$fp0D5DH</password>-->
                         <url>jdbc:mysql://127.0.0.1:3306/demo?useUnicode=true&amp;useSSL=false</url>
                         <username>root</username>
                         <password>root</password>
@@ -49,13 +49,13 @@
                         <idGenType>auto</idGenType>
                     </strategy>
                     <packageInfo>
-                        <parent>com.biz.marketing</parent>
-                        <controller>controller</controller>
+                        <parent>com.zyh.app.zhx.assistant</parent>
+                        <!--<controller>web.api</controller>-->
                         <service>service</service>
-                        <serviceImpl>service.impl</serviceImpl>
-                        <entity>entity</entity>
-                        <vo>model.vo</vo>
-                        <mapper>mapper</mapper>
+                        <serviceImpl>service</serviceImpl>
+                        <entity>dao.entity</entity>
+                        <!--<vo>dto</vo>-->
+                        <mapper>dao.mapper</mapper>
                         <xml>mapper.xml</xml>
                     </packageInfo>
                     <template>

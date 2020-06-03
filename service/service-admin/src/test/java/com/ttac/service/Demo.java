@@ -1,15 +1,15 @@
 package com.ttac.service;
 
-import com.ttac.service.base.service.IdService;
+import com.google.common.collect.Lists;
 import com.ttac.service.util.BPwdEncoderUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * introduce：
@@ -23,8 +23,8 @@ import java.time.LocalDate;
 @Slf4j
 public class Demo {
 
-    @Autowired
-    private IdService idService;
+//    @Autowired
+//    private IdService idService;
 
     @Test
     public void demo1() {
@@ -58,6 +58,20 @@ public class Demo {
         log.info("20%200:{}", 20%200);
     }
 
+    @Test
+    public void ListTest(){
+        List<String> list = Lists.newArrayList();
+        list.forEach(c->log.info("ss:{}",c));
+    }
+
+    @Test
+    public void stringContains(){
+        String d = "SJ12";
+        boolean sj = d.contains("SJ");
+        boolean contains = "SJ".contains(d);
+        log.info("sj:{}", sj);
+        log.info("contains:{}", contains);
+    }
 
 
 

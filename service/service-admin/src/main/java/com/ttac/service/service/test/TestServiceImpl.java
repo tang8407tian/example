@@ -1,7 +1,5 @@
 package com.ttac.service.service.test;
 
-import com.ttac.service.base.service.IdService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,11 +11,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class TestServiceImpl implements  TestService{
-    @Autowired
-    private IdService idService;
+//    @Autowired
+//    private IdService idService;
 
     @Override
     public void test() {
-        idService.getNextId();
+//        idService.getNextId();
     }
 }

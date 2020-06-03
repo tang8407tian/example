@@ -20,6 +20,10 @@ import java.time.LocalDateTime;
  *     那么，我们便可以使用@MappedSuperclass注解，通过这个注解，我们可以将该实体类当成基类实体，它不会隐射到数据库表，
  *         但继承它的子类实体在隐射时会自动扫描该基类实体的隐射属性，添加到子类实体的对应数据库表中。
  *
+ *   数据库 boolean
+ *      查询的时候，tinyint字段中的0，1会自动转化成false，true存到boolean属性中
+ *      新增时，boolean属性false，true会自动转化成0，1存储到 tinyint[1]字段中
+ *
  * @author bang.tang
  * @date 2019/7/16--15:04
  */
@@ -31,40 +35,100 @@ public class BasePO {
      * 主键
      */
     @Id
-    @Column(columnDefinition = " bigint(20) comment '主键'")
+    @Column(columnDefinition = " bigint(32) comment '主键'")
     private Long id;
 
     /**
      * 创建时间
      */
+//    @Column(name = "created_time")
     @Column(columnDefinition = " datetime comment '创建时间'")
-    private LocalDateTime createTime = LocalDateTime.now();
+    protected LocalDateTime createdTime = LocalDateTime.now();
+
+    /**
+     * 更新时间
+     */
+//    @Column(name = "updated_time")
+    @Column(columnDefinition = " datetime comment '创建时间'")
+    protected LocalDateTime updatedTime = LocalDateTime.now();
+
+    /**
+     * 创建人
+     */
+//    @Column(name = "creator")
+    @Column(length = 32, columnDefinition = " varchar(32) comment '创建人名称'")
+    protected String creator;
 
     /**
      * 创建人id
      */
-    @Column(length = 20, columnDefinition = " bigint(20)comment '创建人id'")
-    private Long createById;
+//    @Column(name = "creator_id")
+    @Column(length = 32, columnDefinition = " varchar(32) comment '创建人id'")
+    protected Long creatorId;
 
     /**
-     * 创建人名称
+     * 最后操作人
      */
-    @Column(length = 20, columnDefinition = " varchar(20) comment '创建人名称'")
-    private String createByName;
+//    @Column(name = "last_operator")
+    @Column(length = 32, columnDefinition = " varchar(32) comment '最后操作人'")
+    protected String lastOperator;
 
     /**
-     * 修改时间
+     * 最后操作人id
      */
-    @Column(columnDefinition = "datetime comment '修改时间'")
-    private LocalDateTime updateTime;
+//    @Column(name = "last_operator_id")
+    @Column(length = 32, columnDefinition = " varchar(32) comment '最后操作人id'")
+    protected Long lastOperatorId;
 
     /**
-     * 修改人id
+     * 逻辑删除
      */
-    @Column(length = 20, columnDefinition = " bigint(20) comment '修改人id'")
-    private Long updateById;
+//    @Column(name = "is_deleted")
+    @Column(length = 1,columnDefinition = " tinyint(1) comment '逻辑删除'")
+    protected Boolean deleted = false;
 
-    @Column(length = 20,columnDefinition = " varchar(20) comment '修改人名称'")
-    private String updateByName;
+
+
+
+
+
+
+
+
+//    /**
+//     * 创建时间
+//     */
+//    @Column(columnDefinition = " datetime comment '创建时间'")
+//    private LocalDateTime createTime = LocalDateTime.now();
+//
+//    /**
+//     * 创建人id
+//     */
+//    @Column(length = 32, columnDefinition = " bigint(32) comment '创建人id'")
+//    private Long createById;
+//
+//    /**
+//     * 创建人名称
+//     */
+//    @Column(length = 20, columnDefinition = " varchar(20) comment '创建人名称'")
+//    private String createByName;
+//
+//    /**
+//     * 修改时间
+//     */
+//    @Column(columnDefinition = " datetime comment '修改时间'")
+//    private LocalDateTime updateTime;
+//
+//    /**
+//     * 修改人id
+//     */
+//    @Column(length = 32, columnDefinition = " bigint(32) comment '修改人id'")
+//    private Long updateById;
+//
+//    @Column(length = 20,columnDefinition = " varchar(20) comment '修改人名称'")
+//    private String updateByName;
+//
+//    @Column(length = 2,columnDefinition = " varchar(2) comment '是否逻辑删除(0:否,1:是)'")
+//    private Integer isDel;
 
 }
