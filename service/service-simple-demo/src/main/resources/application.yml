@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: service-simple-demo
+  profiles:
+    active: local

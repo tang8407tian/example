@@ -54,6 +54,8 @@ public class DemoControllerTest {
         List<CompareToDemo> list1 = Lists.newArrayList();
         for (int i = 0; i<7; i++){
             CompareToDemo demo = new CompareToDemo();
+             demo = CompareToDemo.getVO;
+
             demo.setName("demo:"+i);
             double floor = Math.floor(Math.random() * 50);
             demo.setPrice(new BigDecimal(floor));
@@ -98,5 +100,8 @@ public class DemoControllerTest {
         log.info("sj:{}", sj);
         log.info("contains:{}", contains);
     }
+
+
+    public void thre
 
 }

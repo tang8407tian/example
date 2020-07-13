@@ -13,9 +13,18 @@ import java.math.BigDecimal;
 @Data
 public class CompareToDemo {
 
+    public static CompareToDemo getVO = getInstance();
+
     private String name;
 
     private BigDecimal price;
 
     private double age;
+
+    private CompareToDemo() {
+    }
+
+    private static CompareToDemo getInstance(){
+        return new CompareToDemo();
+    }
 }

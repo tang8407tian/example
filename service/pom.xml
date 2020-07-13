@@ -16,6 +16,7 @@
 	<modules>
 		<module>service-admin</module>
 		<module>service-base</module>
+		<module>service-simple-demo</module>
 	</modules>
 
 	<properties>

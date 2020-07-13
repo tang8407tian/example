@@ -1,0 +1,14 @@
+server:
+  port: 9001
+spring:
+  http:
+    encoding:
+      charset: utf-8
+  jackson:
+    default-property-inclusion: non_null
+
+logging:
+  path: ${LOG_PATH:./log/}
+  level:
+    root: ${LOG_LEVEL:info}
+
