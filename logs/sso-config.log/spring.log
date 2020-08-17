@@ -1,0 +1,16 @@
+2020-07-22 02:15:44.958  INFO 61056 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-22 02:16:42.584  INFO 72296 --- [main] com.ttac.config.ConfigApplication        : The following profiles are active: native
+2020-07-22 02:16:43.495  INFO 72296 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7a963616-067c-32bf-80b1-d00733194ea4
+2020-07-22 02:16:43.733  INFO 72296 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2020-07-22 02:16:43.741  INFO 72296 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-22 02:16:43.741  INFO 72296 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-22 02:16:43.839  INFO 72296 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-22 02:16:43.839  INFO 72296 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1234 ms
+2020-07-22 02:16:44.071  INFO 72296 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-22 02:16:44.560  INFO 72296 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-07-22 02:16:44.635  INFO 72296 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2020-07-22 02:16:44.708  INFO 72296 --- [main] com.ttac.config.ConfigApplication        : Started ConfigApplication in 3.435 seconds (JVM running for 4.312)
+2020-07-22 02:16:45.087  INFO 72296 --- [RMI TCP Connection(1)-192.168.1.2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-22 02:16:45.088  INFO 72296 --- [RMI TCP Connection(1)-192.168.1.2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-22 02:16:45.117  INFO 72296 --- [RMI TCP Connection(1)-192.168.1.2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 29 ms
+2020-07-22 23:09:02.577  INFO 72296 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

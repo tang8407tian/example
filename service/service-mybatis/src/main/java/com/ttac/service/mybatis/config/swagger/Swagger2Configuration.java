@@ -52,7 +52,19 @@ public class Swagger2Configuration {
         return new ApiInfoBuilder().title("TTAC Api Docs : txt").version("1.0.0").build();
     }
 
+    @Bean
+    public Docket lockApi() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .groupName("lock")
+                .apiInfo(userApiInfo())
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.ttac.service.mybatis.controller.lock"))
+                .build();
 
+    }
+    private ApiInfo lockApiInfo() {
+        return new ApiInfoBuilder().title("TTAC Api Docs : lock").version("1.0.0").build();
+    }
 
 
    /* private OAuth securitySchema() {

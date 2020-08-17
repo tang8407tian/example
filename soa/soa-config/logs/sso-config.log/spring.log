@@ -1,0 +1,6 @@
+2020-07-22 02:16:34.866  INFO 71472 --- [main] com.ttac.config.ConfigApplicationTests   : The following profiles are active: native
+2020-07-22 02:16:35.913  INFO 71472 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=66c2115b-7da1-31c5-83dd-8ea0e440af5d
+2020-07-22 02:16:36.636  INFO 71472 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-22 02:16:37.605  INFO 71472 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-07-22 02:16:37.664  INFO 71472 --- [main] com.ttac.config.ConfigApplicationTests   : Started ConfigApplicationTests in 3.602 seconds (JVM running for 4.51)
+2020-07-22 02:16:38.188  INFO 71472 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

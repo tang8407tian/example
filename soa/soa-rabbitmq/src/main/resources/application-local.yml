@@ -1,0 +1,15 @@
+server:
+  port: 8081
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:7777/eureka/
+spring:
+  rabbitmq:
+    host: localhost
+#    port: 5672
+    password: guest
+    username: guest
+    virtual-host: virtualTest

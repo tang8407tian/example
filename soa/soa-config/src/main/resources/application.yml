@@ -1,0 +1,12 @@
+server:
+  port: 8082
+    #  servlet:
+  #    context-path: /config
+spring:
+  application:
+    name: soa-config
+  profiles:
+    active: native
+logging:
+  file:
+    path: "logs/sso-config.log"

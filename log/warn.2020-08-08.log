@@ -1,0 +1,101 @@
+2020-08-08 14:30:22,711 [main] WARN  [com.zaxxer.hikari.HikariConfig] - HikariPool-1 - maxLifetime is less than 30000ms, setting to default 1800000ms.
+2020-08-08 14:30:22,713 [main] WARN  [com.zaxxer.hikari.HikariConfig] - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-08-08 14:30:23,935 [main] WARN  [o.s.b.a.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-08 14:30:24,062 [main] WARN  [com.netflix.config.sources.URLConfigurationSource] - No URLs will be polled as dynamic configuration sources.
+2020-08-08 14:30:24,066 [main] WARN  [com.netflix.config.sources.URLConfigurationSource] - No URLs will be polled as dynamic configuration sources.
+2020-08-08 14:31:39,908 [Thread-5] WARN  [com.netflix.discovery.DiscoveryClient] - Saw local status change event StatusChangeEvent [timestamp=1596868299908, current=DOWN, previous=UP]
+2020-08-08 14:31:56,820 [main] WARN  [com.zaxxer.hikari.HikariConfig] - HikariPool-1 - maxLifetime is less than 30000ms, setting to default 1800000ms.
+2020-08-08 14:31:56,820 [main] WARN  [com.zaxxer.hikari.HikariConfig] - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-08-08 14:31:58,323 [main] WARN  [o.s.b.a.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-08 14:31:58,477 [main] WARN  [com.netflix.config.sources.URLConfigurationSource] - No URLs will be polled as dynamic configuration sources.
+2020-08-08 14:31:58,483 [main] WARN  [com.netflix.config.sources.URLConfigurationSource] - No URLs will be polled as dynamic configuration sources.
+2020-08-08 14:32:51,187 [Thread-5] WARN  [com.netflix.discovery.DiscoveryClient] - Saw local status change event StatusChangeEvent [timestamp=1596868371187, current=DOWN, previous=UP]
+2020-08-08 14:33:09,512 [main] WARN  [com.zaxxer.hikari.HikariConfig] - HikariPool-1 - maxLifetime is less than 30000ms, setting to default 1800000ms.
+2020-08-08 14:33:09,512 [main] WARN  [com.zaxxer.hikari.HikariConfig] - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-08-08 14:33:10,728 [main] WARN  [o.s.b.a.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-08 14:33:10,845 [main] WARN  [com.netflix.config.sources.URLConfigurationSource] - No URLs will be polled as dynamic configuration sources.
+2020-08-08 14:33:10,848 [main] WARN  [com.netflix.config.sources.URLConfigurationSource] - No URLs will be polled as dynamic configuration sources.
+2020-08-08 14:36:35,908 [Thread-5] WARN  [com.netflix.discovery.DiscoveryClient] - Saw local status change event StatusChangeEvent [timestamp=1596868595908, current=DOWN, previous=UP]
+2020-08-08 14:36:56,079 [main] WARN  [com.zaxxer.hikari.HikariConfig] - HikariPool-1 - maxLifetime is less than 30000ms, setting to default 1800000ms.
+2020-08-08 14:36:56,080 [main] WARN  [com.zaxxer.hikari.HikariConfig] - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-08-08 14:36:57,541 [main] WARN  [o.s.b.a.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-08 14:36:57,697 [main] WARN  [com.netflix.config.sources.URLConfigurationSource] - No URLs will be polled as dynamic configuration sources.
+2020-08-08 14:36:57,700 [main] WARN  [com.netflix.config.sources.URLConfigurationSource] - No URLs will be polled as dynamic configuration sources.
+2020-08-08 14:38:45,278 [Thread-5] WARN  [com.netflix.discovery.DiscoveryClient] - Saw local status change event StatusChangeEvent [timestamp=1596868725278, current=DOWN, previous=UP]
+2020-08-08 14:39:06,111 [main] WARN  [com.zaxxer.hikari.HikariConfig] - HikariPool-1 - maxLifetime is less than 30000ms, setting to default 1800000ms.
+2020-08-08 14:39:06,111 [main] WARN  [com.zaxxer.hikari.HikariConfig] - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-08-08 14:39:07,619 [main] WARN  [o.s.b.a.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-08 14:39:07,776 [main] WARN  [com.netflix.config.sources.URLConfigurationSource] - No URLs will be polled as dynamic configuration sources.
+2020-08-08 14:39:07,780 [main] WARN  [com.netflix.config.sources.URLConfigurationSource] - No URLs will be polled as dynamic configuration sources.
+2020-08-08 14:41:27,999 [HikariPool-1 housekeeper] WARN  [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s546ms445µs700ns).
+2020-08-08 14:42:29,924 [HikariPool-1 housekeeper] WARN  [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m1s924ms345µs800ns).
+2020-08-08 14:42:29,927 [DiscoveryClient-1] WARN  [com.netflix.discovery.TimedSupervisorTask] - task supervisor timed out
+java.util.concurrent.TimeoutException: null
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)
+	at com.netflix.discovery.TimedSupervisorTask.run(TimedSupervisorTask.java:66)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-08-08 14:42:29,927 [DiscoveryClient-0] WARN  [com.netflix.discovery.TimedSupervisorTask] - task supervisor timed out
+java.util.concurrent.TimeoutException: null
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)
+	at com.netflix.discovery.TimedSupervisorTask.run(TimedSupervisorTask.java:66)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-08-08 14:42:29,936 [DiscoveryClient-CacheRefreshExecutor-0] WARN  [com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient] - Request execution failed with message: com.fasterxml.jackson.core.JsonParseException: processing aborted
+ at [Source: (GZIPInputStream); line: 1, column: 18]
+2020-08-08 14:42:29,941 [DiscoveryClient-CacheRefreshExecutor-0] WARN  [com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient] - Request execution failed with message: com.fasterxml.jackson.core.JsonParseException: processing aborted
+ at [Source: (GZIPInputStream); line: 1, column: 18]
+2020-08-08 14:47:13,006 [Thread-5] WARN  [com.netflix.discovery.DiscoveryClient] - Saw local status change event StatusChangeEvent [timestamp=1596869233006, current=DOWN, previous=UP]
+2020-08-08 14:47:33,182 [main] WARN  [com.zaxxer.hikari.HikariConfig] - HikariPool-1 - maxLifetime is less than 30000ms, setting to default 1800000ms.
+2020-08-08 14:47:33,182 [main] WARN  [com.zaxxer.hikari.HikariConfig] - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-08-08 14:47:34,462 [main] WARN  [o.s.b.a.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-08 14:47:34,609 [main] WARN  [com.netflix.config.sources.URLConfigurationSource] - No URLs will be polled as dynamic configuration sources.
+2020-08-08 14:47:34,612 [main] WARN  [com.netflix.config.sources.URLConfigurationSource] - No URLs will be polled as dynamic configuration sources.
+2020-08-08 21:58:22,662 [Thread-5] WARN  [com.netflix.discovery.DiscoveryClient] - Saw local status change event StatusChangeEvent [timestamp=1596895102662, current=DOWN, previous=UP]
+2020-08-08 21:58:24,685 [DiscoveryClient-InstanceInfoReplicator-0] WARN  [com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient] - Request execution failed with message: java.net.ConnectException: Connection refused: no further information
+2020-08-08 21:58:26,690 [DiscoveryClient-InstanceInfoReplicator-0] WARN  [com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient] - Request execution failed with message: java.net.ConnectException: Connection refused: no further information
+2020-08-08 21:58:26,690 [DiscoveryClient-InstanceInfoReplicator-0] WARN  [com.netflix.discovery.DiscoveryClient] - DiscoveryClient_SERVICE-MYBATIS/windows10.microdone.cn:service-mybatis:9001 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:847)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-08-08 21:58:26,691 [DiscoveryClient-InstanceInfoReplicator-0] WARN  [com.netflix.discovery.InstanceInfoReplicator] - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:847)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2020-08-08 21:58:27,751 [Thread-5] WARN  [com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient] - Request execution failed with message: java.net.ConnectException: Connection refused: no further information

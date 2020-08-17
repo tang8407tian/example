@@ -21,8 +21,8 @@ public class CompareToDemo {
 
     private double age;
 
-    private CompareToDemo() {
-    }
+//    private CompareToDemo() {
+//    }
 
     private static CompareToDemo getInstance(){
         return new CompareToDemo();

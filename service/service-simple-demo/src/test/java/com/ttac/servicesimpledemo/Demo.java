@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.HashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -41,6 +42,40 @@ public class Demo {
         }finally {
             log.info("finally");
         }
+    }
+
+    @Test
+    public void test3(){
+        Integer num = 5;
+        Integer numf = 100;
+        Integer s = num << 1;
+        Integer f = numf >> 1;
+        Integer s1 = num << 2;
+        Integer f1 = numf >> 2;
+        Integer s2 = num << 3;
+        Integer f2 = numf >> 3;
+        Integer s3 = num << 4;
+        Integer f3 = numf >> 4;
+        log.info("s:{}",s);
+        log.info("s:{}",s1);
+        log.info("s:{}",s2);
+        log.info("s:{}",s3);
+        log.info("f:{}",f);
+        log.info("f:{}",f1);
+        log.info("f:{}",f2);
+        log.info("f:{}",f3);
+
+        Object[] t = {};
+        Object[] t1 = null;
+        log.info("t:{}", t.length);
+        log.info("t1:{}", t1.length);
+        StringBuilder builder = new StringBuilder();
+        builder.append("");
+        HashMap<Object, Object> objectObjectHashMap = new HashMap<>(1);
+        objectObjectHashMap.entrySet().iterator();
+        HashMap<Object, Object> map = new HashMap<>(44);
+        map.containsKey()
+
     }
 
 

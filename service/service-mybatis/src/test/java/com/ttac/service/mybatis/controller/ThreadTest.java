@@ -2,6 +2,7 @@ package com.ttac.service.mybatis.controller;
 
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.concurrent.BasicThreadFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,7 +18,8 @@ public class ThreadTest {
 
     @Test
     public void threadPoolTest(){
-        new Thread()
+        new BasicThreadFactory.Builder();
+        Executors.newFixedThreadPool(10);
         ScheduledExecutorService threadPool = Executors.newScheduledThreadPool(1);
         threadPool.schedule(new Runnable() {
             @Override

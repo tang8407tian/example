@@ -4,6 +4,8 @@ package com.ttac.service.mybatis.controller;
 import com.ttac.service.mybatis.service.DemoService;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +23,10 @@ public class DemoController {
     @Autowired
     private DemoService demoService;
 
+    private FactoryBean factoryBean;
+
+    private BeanFactory beanFactory;
+
 
     public void logLog(){
         log.info("test");
@@ -35,6 +41,7 @@ public class DemoController {
     public void logParam(Object o, Object... parama){
         log.info("具体位置:{}, 参数:{}", o, parama);
     }
+
 
 
 }

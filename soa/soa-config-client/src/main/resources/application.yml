@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: soa-config-client
+  cloud:
+    config:
+      label: master
+      profile: dev
+      fail-fast: true
+      uri: http://localhost:8082 #通过域名访问配置中心服务端
+      discovery:
+        enabled: true
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:7777/eureka/

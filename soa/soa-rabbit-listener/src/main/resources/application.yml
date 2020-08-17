@@ -1,0 +1,7 @@
+server:
+  port: 8082
+
+spring:
+  rabbitmq:
+#    port: 5674
+    virtual-host: virtualTest

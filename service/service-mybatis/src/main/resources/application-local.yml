@@ -2,6 +2,12 @@ server:
   port: 9001
   servlet:
     context-path: /service-mybatis
+  tomcat:
+    max-threads: 1000
+    max-connections: 20000
+    max-http-post-size: 10
+    max-http-header-size: 20
+    max-swallow-size: 30
 # 注册到注册中心
 eureka:
   instance:

@@ -8,9 +8,21 @@ import org.springframework.stereotype.Service;
 @Service
 abstract class Demos {
 
+    private String de;
+
+    private static String d;
+
     public abstract void add();
 
     public  abstract  void adds();
+
+    private void test1(){
+
+    }
+
+    private static void test2(){
+
+    }
 
     public  void  submit(){
         log.info("123");
