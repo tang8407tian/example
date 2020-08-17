@@ -11,7 +11,7 @@
     <groupId>com.ttac</groupId>
     <artifactId>mqlisten</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>mqlisten</name>
+    <name>soa-mq-listen</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
