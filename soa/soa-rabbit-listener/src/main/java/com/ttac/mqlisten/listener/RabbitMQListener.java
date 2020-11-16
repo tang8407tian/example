@@ -5,6 +5,7 @@ import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
+
 /**
  * description:
  *
@@ -23,9 +24,15 @@ public class RabbitMQListener {
      * 消息的 content_type 属性表示消息 body 数据以什么数据格式存储，接收消息除了使用 Message 对象接收消息（包含消息属性等信息）之外，还可直接使用对应类型接收消息 body 内容，但若方法参数类型不正确会抛异常
      * @param message
      */
-    @RabbitListener(queues = "ttac.top.queue")
+    @RabbitListener(queues = {"ttac.top.queue"})
     public void listener(Message message){
-        log.info("接收到消息队列消息为:{}",message);
+
+        try {
+            log.info("接收到消息队列消息为:{}",message);
+        } catch (Exception e) {
+//            e.printStackTrace();
+            log.error("rabbitmq接收消息错误:{}",e);
+        }
 
     }
 }

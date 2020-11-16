@@ -9,11 +9,6 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-<!--    <parent>-->
-<!--        <groupId>com.ttac</groupId>-->
-<!--        <artifactId>example</artifactId>-->
-<!--        <version>1.0.0-SNAPSHOT</version>-->
-<!--    </parent>-->
 
     <groupId>com.ttac</groupId>
     <artifactId>service-simple-demo</artifactId>
@@ -63,13 +58,6 @@
             <artifactId>guava</artifactId>
             <version>28.2-jre</version>
         </dependency>
-
-        <!--        <dependency>-->
-<!--            <groupId>com.ttac</groupId>-->
-<!--            <artifactId>entity-admin</artifactId>-->
-<!--            <version>1.0.0-SNAPSHOT</version>-->
-<!--        </dependency>-->
-
     </dependencies>
 
     <build>

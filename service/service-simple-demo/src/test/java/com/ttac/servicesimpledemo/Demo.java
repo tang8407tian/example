@@ -1,5 +1,6 @@
 package com.ttac.servicesimpledemo;
 
+import com.ttac.servicesimpledemo.util.IdSnowflakeWorker;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,6 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.HashMap;
+import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -74,7 +76,36 @@ public class Demo {
         HashMap<Object, Object> objectObjectHashMap = new HashMap<>(1);
         objectObjectHashMap.entrySet().iterator();
         HashMap<Object, Object> map = new HashMap<>(44);
-        map.containsKey()
+
+    }
+
+    @Test
+    public void exceptionTest(){
+
+
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        for(int i=0; i<9;i++){
+            log.info("before a={},b={}", a, b);
+            a = a++;
+            b = ++b;
+//            c = a++;
+            log.info("after a={},b={}", a, b);
+
+        }
+        log.info("a={},b={},c={}", a, b,c);
+//        try {
+//            Integer s = 4/0;
+//            HashMap<Object, Object> map = new HashMap<>();
+//            map.size();
+//        } catch (Exception e) {
+//            String localizedMessage = e.getLocalizedMessage();
+//            Throwable fill = e.fillInStackTrace();
+//            log.error("错误信息 fill :{}",fill);
+//            log.error("错误信息local:{}",localizedMessage);
+//            log.error("错误信息:{}",e);
+//        }
 
     }
 
@@ -109,6 +140,27 @@ public class Demo {
         @Override
         public void run() {
             log.info("{}执行了", Thread.currentThread().getName());
+        }
+    }
+
+
+
+    @Test
+    public void testId(){
+        for (int i=0; i<= 100 ; i++){
+            Long generateId = IdSnowflakeWorker.getGenerateId();
+            log.info("ID=:{}", generateId);
+        }
+    }
+
+    @Test
+    public void randomId(){
+        Random random = new Random();
+        StringBuilder pid = new StringBuilder();
+        int hashCode = pid.toString().hashCode();
+        log.info("hashCode:{}", hashCode);
+        for (int i=0; i<= 100 ; i++){
+            log.info("ID=:{}", random.nextInt(30));
         }
     }
 }

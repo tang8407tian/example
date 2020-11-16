@@ -11,10 +11,13 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.scheduling.concurrent.CustomizableThreadFactory;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.sql.Timestamp;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.*;
 
 
@@ -94,7 +97,7 @@ public class ThreadPoolTest {
      * 2020-07-29 17:10:23.774  INFO 83648 --- [  spring 线程工厂-4] c.ttac.servicesimpledemo.ThreadPoolTest  : 线程组：线程工厂111，线程:spring 线程工厂-4， result=20
      */
     @Test
-    public void test2() {
+    public  void test2() {
         Timestamp start = new Timestamp(System.currentTimeMillis());
         Integer x = 0;
         ExecutorService executorService = Executors.newFixedThreadPool(10, new ThreadFactory() {
@@ -105,6 +108,14 @@ public class ThreadPoolTest {
                 return thread;
             }
         });
+
+        Thread.currentThread();
+        // ThreadPoolTaskExecutor是对ThreadPoolExecutor进行了封装处理。
+        // 有一个 private ThreadPoolExecutor threadPoolExecutor;
+        // 任务队列使用 LinkedBlockingQueue SynchronousQueue
+        ThreadPoolTaskExecutor taskExecutor = new ThreadPoolTaskExecutor();
+        List<Object> objects = Collections.synchronizedList(new ArrayList<>());
+        taskExecutor.setQueueCapacity(10);
 
         // Spring 框架提供的 CustomizableThreadFactory。
         CustomizableThreadFactory customizableThreadFactory = new CustomizableThreadFactory();
@@ -143,6 +154,7 @@ public class ThreadPoolTest {
 ////                e.printStackTrace();
 //            }
         }
+
         executorService.shutdown();
         executorService.shutdownNow();
         while (!executorService.isTerminated()) {

@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * description:
- *
+ *  Direct-Exchange会把它接收到的消息发往与它有绑定关系且Routingkey完全匹配的Queue中（默认）。
  * @author bang.tang
  * @date 2020/8/15--11:29
  */
@@ -37,7 +37,8 @@ public class RabbitMqDirectConfig {
     @Bean
     public Queue queue(){
         // // 第一个参数是创建的queue的名字，第二个参数是是否支持持久化
-        return QueueBuilder.durable(queue_name).build();
+        return new Queue("ttac.top.queue", true);
+//        return QueueBuilder.durable(queue_name).build();
     }
 
     /**

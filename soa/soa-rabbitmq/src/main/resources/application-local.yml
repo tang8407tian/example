@@ -12,4 +12,8 @@ spring:
 #    port: 5672
     password: guest
     username: guest
-    virtual-host: virtualTest
+#    virtual-host: virtualTest
+    # 手动确认消息
+#    listener:
+#      simple:
+#        acknowledge-mode: manual

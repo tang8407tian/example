@@ -9,8 +9,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.concurrent.Executors;
-
 /**
  * description:  数据库锁示例
  *
@@ -38,8 +36,7 @@ public class DataBaseLockController {
     @ApiOperation(value = "注解锁测试2-vo", notes = "注解锁测试2")
     @PostMapping("/lockTest2")
     @LockTest(prefix = "uuid",key = "vo")
-    public void lockTest2(@RequestBody DemoVO vo){\
-        Executors.newSingleThreadExecutor()
+    public void lockTest2(@RequestBody DemoVO vo){
         log.info("DataBaseLockController参数vo:{}",vo);
     }
 }

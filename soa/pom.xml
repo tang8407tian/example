@@ -29,19 +29,19 @@
                 <artifactId>mybatisplus-maven-plugin</artifactId>
                 <version>5.0</version>
                 <configuration>
-                    <outputDir>D:\code\mybatis\xian</outputDir>
+                    <outputDir>D:\code\mybatis\idaas</outputDir>
                     <fileOverride>true</fileOverride>
                     <enableCache>false</enableCache>
                     <author>init</author>
                     <activeRecord>false</activeRecord>
                     <dataSource>
                         <driverName>com.mysql.jdbc.Driver</driverName>
-<!--                        <url>jdbc:mysql://125.64.5.84:23306/metro?useUnicode=true&amp;useSSL=false</url>-->
+                        <url>jdbc:mysql://10.0.248.36:3306/tenant_mgmt?useUnicode=true&amp;useSSL=false</url>
+                        <username>idaas</username>
+                        <password>idaas123</password>
+<!--                        <url>jdbc:mysql://127.0.0.1:3306/demo?useUnicode=true&amp;useSSL=false</url>-->
 <!--                        <username>root</username>-->
-<!--                        <password>6gRHaF49$fp0D5DH</password>-->
-                        <url>jdbc:mysql://127.0.0.1:3306/demo?useUnicode=true&amp;useSSL=false</url>
-                        <username>root</username>
-                        <password>root</password>
+<!--                        <password>root</password>-->
                     </dataSource>
                     <strategy>
                         <naming>underline_to_camel</naming>
@@ -49,13 +49,13 @@
                         <idGenType>auto</idGenType>
                     </strategy>
                     <packageInfo>
-                        <parent>com.zyh.app.zhx.assistant</parent>
-                        <!--<controller>web.api</controller>-->
+                        <parent>kl.idaas.tenant.mgmt</parent>
+                        <controller>cotroller</controller>
                         <service>service</service>
                         <serviceImpl>service</serviceImpl>
-                        <entity>dao.entity</entity>
-                        <!--<vo>dto</vo>-->
-                        <mapper>dao.mapper</mapper>
+                        <entity>model</entity>
+                        <vo>dto</vo>
+                        <mapper>dao</mapper>
                         <xml>mapper.xml</xml>
                     </packageInfo>
                     <template>

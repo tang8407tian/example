@@ -19,7 +19,7 @@ import java.time.LocalDateTime;
 @Entity
 @org.hibernate.annotations.Table(appliesTo = "input_information", comment = "录入信息")
 @Data
-public class InputInformation extends BasePO {
+public class   InputInformation extends BasePO {
 
     @ApiModelProperty("姓名")
     @Column(length = 50, columnDefinition = " varchar(50) comment '姓名'")
